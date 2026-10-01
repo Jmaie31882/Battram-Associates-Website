@@ -17,16 +17,18 @@ const DIST = path.join(__dirname, 'dist');
 const site = JSON.parse(fs.readFileSync(path.join(SRC, 'site.json'), 'utf8'));
 
 const read = (p) => fs.readFileSync(p, 'utf8');
-const partials = Object.fromEntries(
-  fs.readdirSync(path.join(SRC, 'partials'))
-    .filter((f) => f.endsWith('.html'))
-    .map((f) => [f.replace(/\.html$/, ''), read(path.join(SRC, 'partials', f))])
-);
+const partials = {};
+(function loadPartials(dir, prefix) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (e.isDirectory()) loadPartials(path.join(dir, e.name), prefix + e.name + '/');
+    else if (e.name.endsWith('.html')) partials[prefix + e.name.replace(/\.html$/, '')] = read(path.join(dir, e.name)).trim();
+  }
+})(path.join(SRC, 'partials'), '');
 const layout = read(path.join(SRC, 'layout.html'));
 
 function render(tpl, vars) {
   // {{> name}} partials first (they may contain {{vars}})
-  let out = tpl.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, n) => {
+  let out = tpl.replace(/\{\{>\s*([\w\/-]+)\s*\}\}/g, (_, n) => {
     if (!(n in partials)) throw new Error(`Unknown partial: ${n}`);
     return partials[n];
   });

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" fill="none" stroke="#20201e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <g opacity=".9">
+    <path d="M40 150 L40 92 L120 40 L200 92 L200 150"/>
+    <path d="M32 96 L120 38 L208 96"/>
+    <path d="M200 110 L300 110 L300 150"/>
+    <path d="M196 92 L300 92 L310 110"/>
+    <path d="M40 150 L330 150"/>
+    <path d="M24 150 L344 150" stroke-dasharray="2 6"/>
+    <rect x="62" y="104" width="18" height="24"/>
+    <rect x="102" y="104" width="18" height="24"/>
+    <rect x="142" y="104" width="18" height="24"/>
+    <path d="M71 104 V128 M62 116 H80 M111 104 V128 M102 116 H120 M151 104 V128 M142 116 H160"/>
+    <rect x="166" y="118" width="16" height="32"/>
+    <rect x="216" y="120" width="70" height="30"/>
+    <path d="M216 135 H286 M234 120 V150 M252 120 V150 M270 120 V150"/>
+    <path d="M150 56 L150 36 L162 36 L162 64"/>
+    <path d="M90 66 L90 50 L100 50 L100 60"/>
+    <path d="M300 110 L300 92"/>
+    <path d="M20 156 Q60 150 100 158 T180 156 T260 158 T340 156" stroke-width=".7" opacity=".5"/>
+    <path d="M48 92 L48 150 M56 150 L56 96" stroke-width=".5" opacity=".4"/>
+    <path d="M330 60 L330 150 M322 150 L322 70" stroke-width=".5" opacity=".3"/>
+    <circle cx="325" cy="62" r="14" stroke-width=".6" opacity=".4"/>
+    <path d="M311 62 Q325 44 339 62" stroke-width=".6" opacity=".4"/>
+  </g>
+</svg>

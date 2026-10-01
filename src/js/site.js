@@ -25,3 +25,21 @@
     if (e.matches) setOpen(false);
   });
 })();
+
+// Project filters (projects page)
+(function () {
+  var bar = document.querySelector('.filters');
+  var list = document.getElementById('project-list');
+  if (!bar || !list) return;
+  var cards = Array.prototype.slice.call(list.querySelectorAll('article'));
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-filter]');
+    if (!btn) return;
+    var f = btn.getAttribute('data-filter');
+    bar.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+    cards.forEach(function (c) {
+      var tags = (c.getAttribute('data-tags') || '').split(/\s+/);
+      c.hidden = !(f === 'all' || tags.indexOf(f) !== -1);
+    });
+  });
+})();
