@@ -9,6 +9,10 @@
 # Keep the staging site out of search engines. Remove this block at launch.
 https://new.battramassociates.co.uk/*
   X-Robots-Tag: noindex, nofollow
+https://battram-associates-website.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
