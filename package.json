@@ -1,0 +1,11 @@
+{
+  "name": "battram-associates-website",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Static website for Battram Associates, Tring. Built with a dependency-free Node script and hosted on Cloudflare Pages.",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && npx --yes serve dist"
+  },
+  "engines": { "node": ">=18" }
+}

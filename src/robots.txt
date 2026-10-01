@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://new.battramassociates.co.uk/sitemap.xml

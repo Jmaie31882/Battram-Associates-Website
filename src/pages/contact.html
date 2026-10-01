@@ -1,0 +1,68 @@
+<!-- {
+  "title": "Contact",
+  "description": "Get in touch with Battram Associates in Tring, Hertfordshire to discuss a survey, a historic building or a design project. Call 01442 890019 or email enquiries@battramassociates.co.uk."
+} -->
+<section class="page-hero">
+  <div>
+    <span class="eyebrow">Start a conversation</span>
+    <h1>Have a project<br>in mind?</h1>
+  </div>
+  <div>
+    <p>Tell us a little about your property or project and we can discuss the best way forward. We aim to reply to every enquiry within one working day.</p>
+  </div>
+</section>
+
+<section class="contact-page">
+  <div>
+    <h2>Battram Associates</h2>
+    <address>
+      48 High Street<br>
+      Tring, Hertfordshire<br>
+      HP23 5AG<br><br>
+      <a href="tel:+441442890019">{{phone}}</a><br>
+      <a href="mailto:{{email}}">{{email}}</a>
+    </address>
+    <p class="form-note">Office hours Monday to Friday, 9am to 5.30pm.</p>
+  </div>
+  <div>
+    <h2>Send an enquiry</h2>
+    <!-- action will point at a Pages Function (/api/contact) once set up; until then it falls back to email -->
+    <form method="post" action="/api/contact" data-fallback="mailto:{{email}}">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="service">What can we help with?</label>
+        <select id="service" name="service">
+          <option>Building survey</option>
+          <option>Specific defect or party wall</option>
+          <option>Listed or historic building</option>
+          <option>Extension, renovation or new home</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Tell us about the property or project</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <!-- honeypot -->
+      <div class="field" style="position:absolute;left:-9999px" aria-hidden="true">
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <div>
+        <button class="button dark" type="submit">Send enquiry</button>
+        <p class="form-note">We only use your details to respond to your enquiry. See our <a href="/privacy/">privacy notice</a>.</p>
+      </div>
+    </form>
+  </div>
+</section>
