@@ -178,6 +178,10 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; margin: 0; }
 .team img, .team .photo-placeholder { width: 100%; aspect-ratio: .85; object-fit: cover; background: var(--sage); }
 .team h3 { font-size: 22px; margin: 14px 0 2px; }
 .team p { font-size: 12px; color: var(--muted); margin: 0; }
+.team-4 { grid-template-columns: repeat(4, 1fr); gap: 5vw 30px; }
+.bio { font-size: 13px !important; line-height: 1.65 !important; color: var(--body) !important; margin-top: 12px !important; }
+.project-grid-text { gap: 50px 22px; margin-top: 50px; }
+.project-grid-text .photo-placeholder { width: 100%; aspect-ratio: 1.35; background: var(--sage); }
 .prose { max-width: 720px; }
 .prose p { line-height: 1.75; color: var(--body); }
 .prose h2 { font-size: 30px; margin: 40px 0 12px; }
@@ -208,7 +212,7 @@ textarea { min-height: 160px; resize: vertical; }
 
 /* Responsive ----------------------------------------------------- */
 @media (max-width: 1000px) {
-  .service-list, .steps, .team { grid-template-columns: repeat(2, 1fr); }
+  .service-list, .steps, .team, .team-4 { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 850px) {
   .site-header { height: 82px; }
@@ -230,7 +234,7 @@ textarea { min-height: 160px; resize: vertical; }
   .wide-card { grid-template-columns: 1fr !important; }
   .project-grid { gap: 45px; }
   .statement h2, .about h2, .contact-band h2, .two-col h2 { font-size: 34px; }
-  .service-list, .steps, .team { grid-template-columns: 1fr; }
+  .service-list, .steps, .team, .team-4 { grid-template-columns: 1fr; }
   .section { padding: 60px var(--gutter); }
   .foot-right { text-align: left; }
   .foot-right nav { justify-content: flex-start; }
