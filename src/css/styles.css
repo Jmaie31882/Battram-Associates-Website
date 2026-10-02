@@ -156,7 +156,14 @@ p { margin: 0 0 1em; }
 .team h3 { font-size: 22px; margin: 16px 0 2px; }
 .team .role { font-size: 10px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 600; color: var(--muted); margin: 0 0 10px; }
 .team .bio { font-size: 13px; line-height: 1.65; color: var(--body); margin: 0; }
-.team .quals { font-size: 15px; font-family: var(--serif); color: var(--muted); }
+.team .quals { display: block; font-size: 15px; font-family: var(--serif); color: var(--muted); margin-top: 2px; }
+.team .more { margin-top: 12px; }
+.team .more summary { list-style: none; cursor: pointer; display: inline-flex; gap: 10px; align-items: center; text-transform: uppercase; letter-spacing: 1.6px; font-size: 10px; font-weight: 600; padding-bottom: 4px; border-bottom: 1px solid currentColor; }
+.team .more summary::-webkit-details-marker { display: none; }
+.team .more summary::after { content: "+"; font-size: 14px; line-height: 1; }
+.team .more[open] summary::after { content: "\2013"; }
+.team .more[open] summary { margin-bottom: 14px; }
+.team .more p { font-size: 13px; line-height: 1.65; color: var(--body); margin: 0 0 10px; }
 
 /* Values --------------------------------------------------------- */
 .values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 40px; list-style: none; padding: 0; }
