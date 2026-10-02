@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" font-family="Libre Caslon Display, Georgia, serif" fill="none" stroke="#7a7872" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Chiltern scarp contours -->
+  <g stroke-width=".45" opacity=".55">
+    <path d="M10 210 C 70 180, 110 200, 170 170 S 260 150, 330 110 S 390 80, 415 60"/>
+    <path d="M10 240 C 70 210, 120 230, 180 200 S 270 180, 340 140 S 395 110, 415 95"/>
+    <path d="M30 275 C 90 245, 140 262, 200 232 S 290 212, 350 172 S 400 140, 415 130"/>
+  </g>
+  <!-- Grand Union Canal -->
+  <path d="M60 20 C 110 60, 150 70, 190 95 S 240 120, 270 160 S 310 215, 330 290" stroke-width=".6" stroke-dasharray="3 3" opacity=".8"/>
+  <!-- A41 -->
+  <path d="M5 130 C 60 128, 120 118, 175 128 S 250 165, 300 185 S 380 215, 415 232" stroke-width="1.3"/>
+  <!-- A4251 / old road through Tring and Berkhamsted -->
+  <path d="M40 90 C 100 100, 150 105, 198 108 S 265 140, 318 160 S 380 195, 415 205"/>
+  <!-- B488 / B4635 north-south -->
+  <path d="M150 5 C 170 40, 185 80, 198 108 S 215 170, 205 220 S 180 270, 170 298"/>
+  <!-- Icknield Way -->
+  <path d="M5 70 C 70 72, 140 80, 198 108" stroke-width=".6"/>
+  <!-- Minor lanes -->
+  <g stroke-width=".5" opacity=".8">
+    <path d="M198 108 C 230 90, 260 70, 300 50"/>
+    <path d="M300 185 C 300 215, 290 250, 270 295"/>
+    <path d="M80 128 C 85 170, 95 210, 110 250"/>
+    <path d="M318 160 C 340 130, 360 100, 395 70"/>
+  </g>
+  <!-- Towns -->
+  <g fill="#7a7872" stroke="none">
+    <circle cx="48" cy="38" r="2.2"/><circle cx="318" cy="160" r="2.2"/><circle cx="390" cy="262" r="2.2"/><circle cx="70" cy="258" r="2.2"/>
+  </g>
+  <!-- Tring: office -->
+  <circle cx="198" cy="108" r="4.5" fill="#20201e" stroke="none"/>
+  <circle cx="198" cy="108" r="10" stroke="#20201e" stroke-width=".7" opacity=".5"/>
+  <g fill="#44433e" stroke="none">
+    <text x="58" y="34" font-size="11">Aylesbury</text>
+    <text x="210" y="104" font-size="16" fill="#20201e">Tring</text>
+    <text x="300" y="178" font-size="11">Berkhamsted</text>
+    <text x="300" y="266" font-size="11">Hemel Hempstead</text>
+    <text x="22" y="252" font-size="11">Wendover</text>
+    <text x="246" y="38" font-size="8" font-style="italic" fill="#8a8882">Grand Union Canal</text>
+    <text x="340" y="228" font-size="8" font-style="italic" fill="#8a8882">A41</text>
+  </g>
+</svg>

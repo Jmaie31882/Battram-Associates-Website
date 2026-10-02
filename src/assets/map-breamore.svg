@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" font-family="Libre Caslon Display, Georgia, serif" fill="none" stroke="#7a7872" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- New Forest edge contours -->
+  <g stroke-width=".45" opacity=".55">
+    <path d="M260 20 C 290 60, 300 110, 330 150 S 380 220, 415 250"/>
+    <path d="M300 10 C 325 50, 335 95, 365 135 S 405 190, 415 205"/>
+    <path d="M215 290 C 240 250, 280 230, 320 240 S 390 275, 415 290"/>
+  </g>
+  <!-- River Avon -->
+  <path d="M160 5 C 150 40, 175 70, 165 100 S 150 150, 170 185 S 180 240, 160 295" stroke-width=".9" stroke-dasharray="2.5 3" opacity=".85"/>
+  <!-- A338 Salisbury to Ringwood -->
+  <path d="M205 5 C 200 50, 210 90, 205 125 S 195 200, 215 240 S 235 280, 245 298" stroke-width="1.3"/>
+  <!-- B3078 to Fordingbridge / Cranborne -->
+  <path d="M5 230 C 60 215, 120 205, 190 198 S 260 180, 320 160"/>
+  <!-- Lanes -->
+  <g stroke-width=".5" opacity=".8">
+    <path d="M205 125 C 240 118, 275 110, 310 98"/>
+    <path d="M205 125 C 175 130, 140 140, 100 150"/>
+    <path d="M60 60 C 110 90, 150 110, 205 125"/>
+    <path d="M215 240 C 260 230, 300 215, 350 215"/>
+    <path d="M100 150 C 90 190, 80 230, 70 290"/>
+  </g>
+  <!-- Towns -->
+  <g fill="#7a7872" stroke="none">
+    <circle cx="203" cy="20" r="2.2"/><circle cx="196" cy="200" r="2.2"/><circle cx="245" cy="285" r="2.2"/><circle cx="340" cy="112" r="0"/>
+  </g>
+  <!-- Breamore -->
+  <circle cx="205" cy="125" r="4.5" fill="#20201e" stroke="none"/>
+  <circle cx="205" cy="125" r="10" stroke="#20201e" stroke-width=".7" opacity=".5"/>
+  <g fill="#44433e" stroke="none">
+    <text x="212" y="22" font-size="11">Salisbury</text>
+    <text x="218" y="121" font-size="16" fill="#20201e">Breamore</text>
+    <text x="118" y="215" font-size="11">Fordingbridge</text>
+    <text x="256" y="289" font-size="11">Ringwood</text>
+    <text x="318" y="60" font-size="10" font-style="italic" fill="#8a8882">New Forest</text>
+    <text x="120" y="75" font-size="8" font-style="italic" fill="#8a8882">River Avon</text>
+    <text x="222" y="262" font-size="8" font-style="italic" fill="#8a8882">A338</text>
+  </g>
+</svg>

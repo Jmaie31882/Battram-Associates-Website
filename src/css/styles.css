@@ -224,7 +224,9 @@ textarea { min-height: 160px; resize: vertical; }
 .locations .loc + .loc > div:first-child { padding-left: 3vw; }
 .locations h2 { font-size: 34px; margin-bottom: 14px; }
 .locations p { font-size: 14px; line-height: 1.7; color: #45443f; }
-.locations .map { background: var(--sage-light); display: grid; place-items: center; min-height: 260px; color: #7d7b73; font-size: 10px; letter-spacing: 1.6px; text-transform: uppercase; }
+.locations .map { background: var(--sage-light); display: grid; place-items: center; min-height: 260px; padding: 24px; }
+.locations .map img { width: 100%; height: 100%; max-height: 320px; object-fit: contain; }
+.office-sketch { margin-top: 34px; max-width: 420px; width: 100%; }
 
 /* Footer --------------------------------------------------------- */
 .site-footer { padding: 55px var(--gutter); display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 40px; align-items: start; border-top: 1px solid var(--line); }
