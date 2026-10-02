@@ -5,6 +5,10 @@
   "email": "enquiries@battramassociates.co.uk",
   "phone": "01442 890019",
   "address": "48 High Street, Tring, Hertfordshire, HP23 5AG",
-  "logo_src": "/assets/logo-battram.png",
-  "logo_alt": "Battram Associates"
+  "logo_alt": "Battram Associates",
+  "logo_mono": "/assets/mono-ba.png",
+  "logo_line1": "BATTRAM",
+  "logo_line2": "ASSOCIATES",
+  "logo_sub": "",
+  "logo_tag": "Surveying&nbsp;&nbsp;|&nbsp;&nbsp;Heritage&nbsp;&nbsp;|&nbsp;&nbsp;Architectural Design"
 }

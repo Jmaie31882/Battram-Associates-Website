@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" fill="none" stroke="#20201e" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round" font-family="DM Sans, Arial, sans-serif">
+  <!-- FRONT ELEVATION of a Georgian townhouse with a glazed side extension -->
+  <!-- main house -->
+  <rect x="70" y="62" width="150" height="98"/>
+  <path d="M62 62 L145 24 L228 62 Z"/>
+  <path d="M100 44 V28 H112 V38 M180 44 V28 H192 V38"/>
+  <!-- parapet / string course -->
+  <path d="M70 108 H220" stroke-width=".5"/>
+  <!-- door -->
+  <rect x="134" y="118" width="22" height="42"/>
+  <path d="M134 118 a11 11 0 0 1 22 0" stroke-width=".6"/>
+  <path d="M145 118 V160 M134 139 H156" stroke-width=".4" opacity=".7"/>
+  <circle cx="151" cy="141" r="1"/>
+  <!-- sash windows: 3 over 3 -->
+  <g stroke-width=".6">
+    <rect x="86" y="72" width="18" height="26"/><path d="M95 72 V98 M86 85 H104"/>
+    <rect x="136" y="72" width="18" height="26"/><path d="M145 72 V98 M136 85 H154"/>
+    <rect x="186" y="72" width="18" height="26"/><path d="M195 72 V98 M186 85 H204"/>
+    <rect x="86" y="118" width="18" height="30"/><path d="M95 118 V148 M86 133 H104"/>
+    <rect x="186" y="118" width="18" height="30"/><path d="M195 118 V148 M186 133 H204"/>
+  </g>
+  <!-- glazing bars (fine) -->
+  <g stroke-width=".3" opacity=".6">
+    <path d="M90.5 72 V98 M99.5 72 V98 M86 78.5 H104 M86 91.5 H104"/>
+    <path d="M140.5 72 V98 M149.5 72 V98 M136 78.5 H154 M136 91.5 H154"/>
+    <path d="M190.5 72 V98 M199.5 72 V98 M186 78.5 H204 M186 91.5 H204"/>
+  </g>
+  <!-- glazed side extension -->
+  <rect x="220" y="104" width="76" height="56"/>
+  <path d="M216 100 H300 V104 H216 Z"/>
+  <path d="M235 104 V160 M250 104 V160 M265 104 V160 M280 104 V160" stroke-width=".5"/>
+  <path d="M220 132 H296" stroke-width=".35" opacity=".6"/>
+  <!-- ground line and hatching below -->
+  <path d="M30 160 H330" stroke-width="1.1"/>
+  <g stroke-width=".4" opacity=".6">
+    <path d="M34 166 L40 160 M44 166 L50 160 M54 166 L60 160 M64 166 L70 160 M74 166 L80 160 M84 166 L90 160 M94 166 L100 160 M104 166 L110 160 M114 166 L120 160 M124 166 L130 160 M134 166 L140 160 M144 166 L150 160 M154 166 L160 160 M164 166 L170 160 M174 166 L180 160 M184 166 L190 160 M194 166 L200 160 M204 166 L210 160 M214 166 L220 160 M224 166 L230 160 M234 166 L240 160 M244 166 L250 160 M254 166 L260 160 M264 166 L270 160 M274 166 L280 160 M284 166 L290 160 M294 166 L300 160 M304 166 L310 160 M314 166 L320 160 M324 166 L330 160"/>
+  </g>
+  <!-- dimensions -->
+  <g stroke-width=".5">
+    <path d="M70 178 H220 M70 174 V182 M220 174 V182"/>
+    <path d="M220 184 H296 M296 180 V188"/>
+    <path d="M318 62 V160 M314 62 H322 M314 160 H322"/>
+    <path d="M44 24 V160 M40 24 H48" />
+  </g>
+  <g fill="#44433e" stroke="none" font-size="6.5" letter-spacing=".5">
+    <text x="128" y="190">9.60 m</text>
+    <text x="243" y="196">4.20 m</text>
+    <text x="326" y="114">3.1 m</text>
+  </g>
+  <!-- title block -->
+  <g stroke-width=".5">
+    <rect x="236" y="14" width="96" height="30"/>
+    <path d="M236 24 H332 M236 34 H332 M290 14 V44"/>
+  </g>
+  <g fill="#44433e" stroke="none" font-size="4.6" letter-spacing=".4">
+    <text x="239" y="21">FRONT ELEVATION</text><text x="293" y="21">SCALE 1:100</text>
+    <text x="239" y="31">BATTRAM ASSOCIATES</text><text x="293" y="31">DWG 01</text>
+    <text x="239" y="41">PLANNING ISSUE</text><text x="293" y="41">REV A</text>
+  </g>
+</svg>

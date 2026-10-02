@@ -31,10 +31,16 @@ p { margin: 0 0 1em; }
 .skip:focus { left: 8px; }
 
 /* Header -------------------------------------------------------- */
-.site-header { height: 108px; padding: 0 var(--gutter); display: flex; align-items: center; justify-content: space-between; background: var(--paper-light); position: relative; }
-.brand { display: block; text-decoration: none; color: var(--ink); }
-.brand img { height: 66px; width: auto; }
-.site-footer .brand img { height: 60px; }
+.site-header { height: 118px; padding: 0 var(--gutter); display: flex; align-items: center; justify-content: space-between; background: var(--paper-light); position: relative; }
+.brand { display: flex; align-items: center; gap: 18px; text-decoration: none; color: var(--ink); }
+.brand .mono { height: 64px; width: auto; }
+.brand .wordmark { display: flex; flex-direction: column; justify-content: center; padding-left: 18px; border-left: 1px solid #8e8b84; align-self: stretch; }
+.brand .name { font: 21px/1.08 var(--serif); letter-spacing: 2.4px; text-transform: uppercase; }
+.brand .sub { font: 500 8.5px/1 var(--sans); letter-spacing: 2.6px; text-transform: uppercase; color: #5a5852; margin-top: 7px; }
+.brand .tag { font: 500 8px/1 var(--sans); letter-spacing: 2.2px; text-transform: uppercase; color: #5a5852; margin-top: 8px; white-space: nowrap; }
+.page-design .brand .name { font-size: 19px; letter-spacing: 3px; }
+.site-footer .brand .mono { height: 56px; }
+.site-footer .brand .name { font-size: 18px; }
 .site-nav { display: flex; gap: 34px; }
 .site-nav a, .menu { font: 500 12px var(--sans); color: var(--ink); text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { border-bottom-color: var(--ink); }
@@ -131,12 +137,12 @@ p { margin: 0 0 1em; }
 
 /* Let's talk band ------------------------------------------------ */
 .talk { display: grid; grid-template-columns: 1fr 1fr; background: var(--moss); color: var(--paper); }
-.talk > div:first-child { padding: 90px var(--gutter); }
+.talk > div:first-child { padding: 64px var(--gutter); }
 .talk .eyebrow { color: #d9dccf; }
-.talk h2 { font-size: 48px; line-height: 1.05; margin: 0 0 22px; }
+.talk h2 { font-size: 40px; line-height: 1.05; margin: 0 0 18px; }
 .talk p { line-height: 1.7; color: #e3e5db; max-width: 460px; font-size: 16px; }
 .talk .text-link { color: #fff; }
-.talk img, .talk .photo-placeholder { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
+.talk img, .talk .photo-placeholder { width: 100%; height: 100%; min-height: 280px; max-height: 340px; object-fit: cover; }
 .talk .photo-placeholder { background: #5a6354; }
 .talk .photo-placeholder::after { color: #c9cdbf; }
 
@@ -155,7 +161,12 @@ p { margin: 0 0 1em; }
 .team { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: auto auto auto auto auto auto; gap: 0 30px; margin-top: 50px; }
 .team article { display: grid; grid-template-rows: subgrid; grid-row: span 6; align-content: start; }
 .team img, .team .photo-placeholder { width: 100%; aspect-ratio: 1.2; object-fit: cover; }
-.team h3 { font-size: 22px; margin: 16px 0 0; }
+.team h3 { font-size: 22px; margin: 16px 0 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; align-self: start; }
+.team h3 .li-btn { margin-top: 4px; }
+.team h3 .nm { display: block; }
+.li-btn { flex: none; display: inline-flex; align-items: center; gap: 6px; font: 600 9px/1 var(--sans); letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 7px 10px; border-radius: 999px; transition: background .15s, color .15s; }
+.li-btn:hover { background: var(--ink); color: var(--paper); }
+.li-btn span { font-size: 11px; }
 .team .role { font-size: 10px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 600; color: var(--muted); margin: 6px 0 12px; }
 .team .bio, .team .more p { font: 400 13px/1.65 var(--sans); color: var(--body); margin: 0 0 10px; }
 .team .quals { display: block; font-size: 15px; font-family: var(--serif); color: var(--muted); margin-top: 2px; }
@@ -177,6 +188,12 @@ p { margin: 0 0 1em; }
 .accreditations { list-style: none; margin: 56px 0 0; padding: 40px 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; align-items: center; }
 .accreditations li { display: grid; place-items: center; height: 80px; padding: 0 6%; }
 .accreditations img { max-height: 54px; max-width: 100%; width: auto; height: auto; object-fit: contain; }
+
+/* Simple page intro (privacy, 404) ------------------------------- */
+.page-intro { padding: 90px var(--gutter) 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; border-bottom: 1px solid var(--line); }
+.page-intro h1 { font-size: 52px; line-height: 1.05; }
+.page-intro p { max-width: 520px; line-height: 1.75; color: var(--body); font-size: 16px; margin: 0; }
+.page-intro .eyebrow { margin-bottom: 18px; }
 
 /* Generic sections ----------------------------------------------- */
 .section { padding: 80px var(--gutter); }
@@ -251,20 +268,24 @@ textarea { min-height: 160px; resize: vertical; }
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 850px) {
-  .site-header { height: 82px; }
-  .brand img { height: 46px; }
+  .site-header { height: 84px; }
+  .brand .mono { height: 44px; }
+  .brand .name { font-size: 15px; letter-spacing: 1.6px; }
+  .brand .tag, .brand .sub { font-size: 6.5px; letter-spacing: 1.4px; }
+  .brand .wordmark { padding-left: 12px; }
+  .brand { gap: 12px; }
   .site-nav { display: none; position: absolute; z-index: 20; top: 82px; left: 0; right: 0; background: var(--paper-light); padding: 25px var(--gutter) 30px; flex-direction: column; gap: 18px; border-bottom: 1px solid var(--line); }
   .site-nav.open { display: flex; }
   .menu { display: block; }
   .hero, .hero.inner { height: 620px; }
   .hero h1, .hero.inner h1 { font-size: 42px; }
   .hero.inner .sub { font-size: 26px; }
-  .overview, .approach, .talk, .intro-grid, .project-grid, .project-grid.cols-4, .two-col, .lead, .contact-page, .locations, .site-footer, .closing { grid-template-columns: 1fr; }
+  .page-intro, .overview, .approach, .talk, .intro-grid, .project-grid, .project-grid.cols-4, .two-col, .lead, .contact-page, .locations, .site-footer, .closing { grid-template-columns: 1fr; }
   .overview .trio { grid-template-columns: 1fr; }
   .overview .trio img, .overview .trio .photo-placeholder, .overview img, .overview .photo-placeholder { height: 260px; }
   .approach img, .approach .photo-placeholder, .talk img, .talk .photo-placeholder { min-height: 300px; }
   .approach > div, .talk > div:first-child { padding: 60px var(--gutter); }
-  .approach h2, .talk h2, .overview h2, .two-col h2, .lead h2 { font-size: 34px; }
+  .approach h2, .talk h2, .overview h2, .two-col h2, .lead h2, .page-intro h1 { font-size: 34px; }
   .intro-grid article { padding-right: 0; }
   .intro-grid article + article { border-left: 0; border-top: 1px solid var(--line); padding: 45px 0 60px; }
   .service-grid, .values, .steps { grid-template-columns: 1fr; }
