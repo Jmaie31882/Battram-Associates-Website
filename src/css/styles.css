@@ -89,7 +89,7 @@ p { margin: 0 0 1em; }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; margin: 0; padding: 0; }
 .service-grid li { padding: 34px 32px 34px 0; border-top: 1px solid var(--line); }
 .service-grid li:not(:nth-child(3n+1)) { padding-left: 32px; border-left: 1px solid var(--line); }
-.service-grid .ico { width: 30px; height: 30px; stroke: var(--ink); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 18px; }
+.service-grid .ico { width: 30px; height: 30px; stroke: var(--ink); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 22px; }
 .service-grid .n { font-size: 11px; font-weight: 600; letter-spacing: 1.6px; color: var(--muted); margin-bottom: 14px; display: block; }
 .service-grid h3 { font-size: 24px; margin-bottom: 8px; }
 .service-grid p { font-size: 13px; line-height: 1.6; color: var(--body); margin: 0; }
