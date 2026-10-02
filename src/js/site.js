@@ -43,3 +43,11 @@
     });
   });
 })();
+
+// Team bios: "Show less" collapses the details again
+document.querySelectorAll('.team .more .less').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var d = btn.closest('details'); d.removeAttribute('open');
+    d.querySelector('summary').focus();
+  });
+});
