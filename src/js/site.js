@@ -51,3 +51,39 @@ document.querySelectorAll('.team .more .less').forEach(function (btn) {
     d.querySelector('summary').focus();
   });
 });
+
+// Contact form: submit in the background and show the result inline
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = form.querySelector('.form-status');
+  var btn = form.querySelector('button[type="submit"]');
+  form.elements.ts.value = String(Date.now());
+  if (/[?&]error=1/.test(location.search)) show('Sorry, your message could not be sent. Please try again, or email enquiries@battramassociates.co.uk.', true);
+
+  function show(msg, isError) {
+    status.textContent = msg;
+    status.className = 'form-status' + (isError ? ' error' : '');
+    status.hidden = false;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = null;
+    ['name', 'email', 'message'].forEach(function (n) {
+      var el = form.elements[n]; var ok = el.value.trim() !== '' && (n !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim()));
+      el.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = el;
+    });
+    if (bad) { show('Please fill in your name, a valid email address and a message.', true); bad.focus(); return; }
+
+    btn.disabled = true; var label = btn.innerHTML; btn.textContent = 'Sending…';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (r) { return r.json().catch(function () { return { ok: false, message: 'Sorry, something went wrong. Please email enquiries@battramassociates.co.uk.' }; }); })
+      .then(function (res) {
+        show(res.message, !res.ok);
+        if (res.ok) { form.reset(); form.elements.ts.value = String(Date.now()); }
+      })
+      .catch(function () { show('Sorry, your message could not be sent. Please check your connection, or email enquiries@battramassociates.co.uk.', true); })
+      .then(function () { btn.disabled = false; btn.innerHTML = label; status.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); });
+  });
+})();

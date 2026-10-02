@@ -12,8 +12,9 @@
 <section class="contact-page">
   <div>
     <span class="eyebrow rule">Get in touch</span>
-    <!-- action will point at a Pages Function (/api/contact) once set up -->
-    <form method="post" action="/api/contact">
+    <form method="post" action="/api/contact" id="contact-form" novalidate>
+      <input type="hidden" name="ts" value="">
+      <div class="form-status" role="status" aria-live="polite" hidden></div>
       <div class="field">
         <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
         <input id="name" name="name" type="text" autocomplete="name" required>

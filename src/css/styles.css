@@ -237,6 +237,10 @@ input, textarea, select { font: 15px var(--sans); color: var(--ink); background:
 input:focus, textarea:focus, select:focus { border-color: var(--ink); outline: none; background: var(--paper-light); }
 textarea { min-height: 160px; resize: vertical; }
 .form-note { font-size: 12px; color: var(--muted); }
+.form-status { padding: 14px 16px; font-size: 14px; line-height: 1.5; border-left: 3px solid var(--moss); background: #e9ebe3; color: var(--ink); }
+.form-status.error { border-left-color: #a0463a; background: #f3e7e4; }
+.button[disabled] { opacity: .6; cursor: wait; }
+input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463a; }
 .locations { display: grid; grid-template-columns: 1fr 1fr; background: var(--sage); }
 .locations .loc { display: grid; grid-template-columns: 1fr 1fr; }
 .locations .loc + .loc { border-left: 1px solid rgba(0,0,0,.08); }
