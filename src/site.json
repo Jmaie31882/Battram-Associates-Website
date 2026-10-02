@@ -1,8 +1,10 @@
 {
   "name": "Battram Associates",
   "url": "https://new.battramassociates.co.uk",
-  "tagline": "Surveying · Heritage · Architectural Design",
+  "tagline": "Surveying \u00b7 Heritage \u00b7 Architectural Design",
   "email": "enquiries@battramassociates.co.uk",
   "phone": "01442 890019",
-  "address": "48 High Street, Tring, Hertfordshire, HP23 5AG"
+  "address": "48 High Street, Tring, Hertfordshire, HP23 5AG",
+  "logo_src": "/assets/logo-battram.png",
+  "logo_alt": "Battram Associates"
 }

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" fill="none" stroke="#20201e" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <!-- ground -->
+  <path d="M14 158 H346"/>
+  <path d="M8 164 Q60 160 110 166 T210 164 T310 166 T352 163" stroke-width=".6" opacity=".45"/>
+
+  <!-- HERITAGE: historic gabled house with arched window and chimney (left) -->
+  <path d="M40 158 V84 L108 44 L176 84 V158"/>
+  <path d="M32 88 L108 42 L184 88"/>
+  <path d="M60 60 V40 H72 V53"/>
+  <path d="M60 40 H72"/>
+  <!-- arched window -->
+  <path d="M92 158 V116 a16 16 0 0 1 32 0 V158"/>
+  <path d="M108 100 V158 M96 128 H120" stroke-width=".7"/>
+  <path d="M100 112 a8 8 0 0 1 16 0" stroke-width=".6"/>
+  <!-- small windows -->
+  <rect x="54" y="96" width="14" height="20"/><path d="M61 96 V116 M54 106 H68" stroke-width=".6"/>
+  <rect x="148" y="96" width="14" height="20"/><path d="M155 96 V116 M148 106 H162" stroke-width=".6"/>
+  <!-- stone coursing hint -->
+  <path d="M44 132 H84 M44 144 H86 M132 132 H172 M130 144 H172" stroke-width=".5" opacity=".5"/>
+  <path d="M48 138 H80 M136 138 H170" stroke-width=".5" opacity=".35"/>
+
+  <!-- ARCHITECTURAL DESIGN: flat-roofed glazed extension (right) -->
+  <path d="M176 158 V104 H300 V158"/>
+  <path d="M172 104 H306 V98 H172 Z"/>
+  <path d="M300 98 V104"/>
+  <!-- glazing mullions -->
+  <path d="M196 104 V158 M220 104 V158 M244 104 V158 M268 104 V158 M292 104 V158" stroke-width=".7"/>
+  <path d="M176 131 H300" stroke-width=".5" opacity=".6"/>
+  <!-- interior hint -->
+  <path d="M230 158 V146 H258 V158" stroke-width=".6" opacity=".6"/>
+  <path d="M238 146 V140 H250 V146" stroke-width=".5" opacity=".5"/>
+  <!-- paving -->
+  <path d="M306 158 H340 M306 152 H336" stroke-width=".5" opacity=".5"/>
+
+  <!-- SURVEYING: dimension lines, level line and a drafting compass -->
+  <!-- overall width dimension -->
+  <path d="M40 178 H300" stroke-width=".7"/>
+  <path d="M40 173 V183 M176 173 V183 M300 173 V183" stroke-width=".7"/>
+  <path d="M44 176 L40 178 L44 180 M296 176 L300 178 L296 180" stroke-width=".7"/>
+  <!-- height dimension on the extension -->
+  <path d="M318 98 V158" stroke-width=".7"/>
+  <path d="M313 98 H323 M313 158 H323" stroke-width=".7"/>
+  <!-- ridge height leader -->
+  <path d="M108 42 H24 M24 38 V46 M24 158 V46" stroke-width=".6" opacity=".7" stroke-dasharray="3 4"/>
+  <!-- level line -->
+  <path d="M20 104 H330" stroke-width=".5" stroke-dasharray="1.5 5" opacity=".6"/>
+  <!-- compass -->
+  <path d="M332 26 L318 70 M332 26 L346 70" stroke-width="1"/>
+  <circle cx="332" cy="24" r="3"/>
+  <path d="M325 48 Q332 52 339 48" stroke-width=".7"/>
+  <!-- magnifier (defect inspection) -->
+  <circle cx="24" cy="24" r="9"/>
+  <path d="M30.5 30.5 L40 40"/>
+</svg>
