@@ -39,8 +39,11 @@ p { margin: 0 0 1em; }
 .brand .sub { font: 500 8.5px/1 var(--sans); letter-spacing: 2.6px; text-transform: uppercase; color: #5a5852; margin-top: 7px; }
 .brand .tag { font: 500 8px/1 var(--sans); letter-spacing: 2.2px; text-transform: uppercase; color: #5a5852; margin-top: 8px; white-space: nowrap; }
 .page-design .brand .name { font-size: 19px; letter-spacing: 3px; }
-.site-footer .brand .mono { height: 56px; }
-.site-footer .brand .name { font-size: 18px; }
+.site-footer .brand .mono { height: 48px; }
+.site-footer .brand .name { font-size: 16px; letter-spacing: 2px; }
+.site-footer .brand .tag { font-size: 7px; letter-spacing: 1.8px; }
+.site-footer .brand .wordmark { padding-left: 14px; }
+.site-footer .brand { gap: 14px; }
 .site-nav { display: flex; gap: 34px; }
 .site-nav a, .menu { font: 500 12px var(--sans); color: var(--ink); text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { border-bottom-color: var(--ink); }
@@ -137,12 +140,13 @@ p { margin: 0 0 1em; }
 
 /* Let's talk band ------------------------------------------------ */
 .talk { display: grid; grid-template-columns: 1fr 1fr; background: var(--moss); color: var(--paper); }
-.talk > div:first-child { padding: 64px var(--gutter); }
+.talk > div:first-child { padding: 56px var(--gutter); }
 .talk .eyebrow { color: #d9dccf; }
 .talk h2 { font-size: 40px; line-height: 1.05; margin: 0 0 18px; }
 .talk p { line-height: 1.7; color: #e3e5db; max-width: 460px; font-size: 16px; }
 .talk .text-link { color: #fff; }
-.talk img, .talk .photo-placeholder { width: 100%; height: 100%; min-height: 280px; max-height: 340px; object-fit: cover; }
+.talk { min-height: 0; }
+.talk img, .talk .photo-placeholder { width: 100%; height: 100%; min-height: 300px; object-fit: cover; }
 .talk .photo-placeholder { background: #5a6354; }
 .talk .photo-placeholder::after { color: #c9cdbf; }
 
@@ -245,12 +249,12 @@ textarea { min-height: 160px; resize: vertical; }
 .office-sketch { margin-top: 34px; max-width: 420px; width: 100%; }
 
 /* Footer --------------------------------------------------------- */
-.site-footer { padding: 55px var(--gutter); display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 40px; align-items: start; border-top: 1px solid var(--line); }
+.site-footer { padding: 55px var(--gutter); display: grid; grid-template-columns: auto 1fr auto; gap: 40px 5vw; align-items: start; border-top: 1px solid var(--line); }
 .site-footer p { font-size: 11px; color: var(--muted); margin: 0 0 4px; }
 .site-footer a { color: inherit; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 .foot-right { text-align: right; }
-.foot-right nav { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: flex-end; margin-bottom: 14px; font-size: 11px; }
+.foot-right nav { display: flex; flex-wrap: nowrap; gap: 8px 14px; justify-content: flex-end; margin-bottom: 14px; font-size: 11px; white-space: nowrap; }
 
 /* Responsive ----------------------------------------------------- */
 @media (max-width: 1100px) {
@@ -265,6 +269,9 @@ textarea { min-height: 160px; resize: vertical; }
   .values li:nth-child(2n) { border-left: 1px solid var(--line); padding-left: 28px; }
   .closing { grid-template-columns: 1fr 1fr; }
   .closing .sketch { display: none; }
+  .site-footer { grid-template-columns: 1fr 1fr; }
+  .foot-right { grid-column: 1 / -1; text-align: left; }
+  .foot-right nav { justify-content: flex-start; flex-wrap: wrap; white-space: normal; }
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 850px) {
@@ -303,7 +310,7 @@ textarea { min-height: 160px; resize: vertical; }
   .locations .loc + .loc { border-left: 0; border-top: 1px solid rgba(0,0,0,.08); }
   .locations .loc > div:first-child, .locations .loc + .loc > div:first-child { padding: 50px var(--gutter) 30px; }
   .foot-right { text-align: left; }
-  .foot-right nav { justify-content: flex-start; }
+  .foot-right nav { justify-content: flex-start; flex-wrap: wrap; white-space: normal; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
