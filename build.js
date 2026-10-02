@@ -24,7 +24,13 @@ const partials = {};
     else if (e.name.endsWith('.html')) partials[prefix + e.name.replace(/\.html$/, '')] = read(path.join(dir, e.name)).trim();
   }
 })(path.join(SRC, 'partials'), '');
-const layout = read(path.join(SRC, 'layout.html'));
+const crypto = require('crypto');
+const hash = (f) => crypto.createHash('sha1').update(fs.readFileSync(path.join(SRC, f))).digest('hex').slice(0, 10);
+// Cache-busting: every change to CSS/JS gives the file a new URL, so browsers never use a stale copy
+const ASSET_V = { css: hash('css/styles.css'), js: hash('js/site.js') };
+const layout = read(path.join(SRC, 'layout.html'))
+  .replace('/css/styles.css', '/css/styles.css?v=' + ASSET_V.css)
+  .replace('/js/site.js', '/js/site.js?v=' + ASSET_V.js);
 
 function render(tpl, vars) {
   // {{> name}} partials first (they may contain {{vars}})

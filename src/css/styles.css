@@ -279,13 +279,15 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 850px) {
-  .site-header { height: 84px; }
-  .brand .mono { height: 44px; }
-  .brand .name { font-size: 15px; letter-spacing: 1.6px; }
-  .brand .tag, .brand .sub { font-size: 6.5px; letter-spacing: 1.4px; }
-  .brand .wordmark { padding-left: 12px; }
-  .brand { gap: 12px; }
-  .site-nav { display: none; position: absolute; z-index: 20; top: 82px; left: 0; right: 0; background: var(--paper-light); padding: 25px var(--gutter) 30px; flex-direction: column; gap: 18px; border-bottom: 1px solid var(--line); }
+  .site-header { height: 78px; }
+  .brand { gap: 10px; min-width: 0; flex: 1 1 auto; }
+  .brand .mono { height: 40px; }
+  .brand .wordmark { padding-left: 10px; min-width: 0; }
+  .brand .name { font-size: 14px; letter-spacing: 1.4px; }
+  .brand .tag, .brand .sub { font-size: 6px; letter-spacing: 1px; margin-top: 5px; }
+  .page-design .brand .name { font-size: 12.5px; letter-spacing: 1.6px; }
+  .menu { flex: none; margin-left: 12px; }
+  .site-nav { display: none; position: absolute; z-index: 20; top: 78px; left: 0; right: 0; background: var(--paper-light); padding: 25px var(--gutter) 30px; flex-direction: column; gap: 18px; border-bottom: 1px solid var(--line); }
   .site-nav.open { display: flex; }
   .menu { display: block; }
   .hero, .hero.inner { height: 620px; }
