@@ -38,7 +38,6 @@ p { margin: 0 0 1em; }
 .brand .name { font: 21px/1.08 var(--serif); letter-spacing: 2.4px; text-transform: uppercase; }
 .brand .sub { font: 500 8.5px/1 var(--sans); letter-spacing: 2.6px; text-transform: uppercase; color: #5a5852; margin-top: 7px; }
 .brand .tag { font: 500 8px/1 var(--sans); letter-spacing: 2.2px; text-transform: uppercase; color: #5a5852; margin-top: 8px; white-space: nowrap; }
-.page-design .brand .name { font-size: 19px; letter-spacing: 3px; }
 .site-footer .brand .mono { height: 48px; }
 .site-footer .brand .name { font-size: 16px; letter-spacing: 2px; }
 .site-footer .brand .tag { font-size: 7px; letter-spacing: 1.8px; }
@@ -285,7 +284,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
   .brand .wordmark { padding-left: 10px; min-width: 0; }
   .brand .name { font-size: 14px; letter-spacing: 1.4px; }
   .brand .tag, .brand .sub { font-size: 6px; letter-spacing: 1px; margin-top: 5px; }
-  .page-design .brand .name { font-size: 12.5px; letter-spacing: 1.6px; }
   .menu { flex: none; margin-left: 12px; }
   .site-nav { display: none; position: absolute; z-index: 20; top: 78px; left: 0; right: 0; background: var(--paper-light); padding: 25px var(--gutter) 30px; flex-direction: column; gap: 18px; border-bottom: 1px solid var(--line); }
   .site-nav.open { display: flex; }
