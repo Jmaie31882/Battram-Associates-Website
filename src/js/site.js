@@ -87,3 +87,22 @@ document.querySelectorAll('.team .more .less').forEach(function (btn) {
       .then(function () { btn.disabled = false; btn.innerHTML = label; status.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); });
   });
 })();
+
+// Project photo galleries: arrows, dots and swipe
+document.querySelectorAll('[data-gallery]').forEach(function (g) {
+  var track = g.querySelector('.track'), dots = g.querySelectorAll('.dots i');
+  var prev = g.querySelector('.g-prev'), next = g.querySelector('.g-next');
+  function idx() { return Math.round(track.scrollLeft / track.clientWidth); }
+  function update() {
+    var i = idx(), n = dots.length;
+    dots.forEach(function (d, j) { d.classList.toggle('on', j === i); });
+    prev.disabled = i <= 0; next.disabled = i >= n - 1;
+  }
+  function go(d) { track.scrollTo({ left: (idx() + d) * track.clientWidth, behavior: 'smooth' }); }
+  prev.addEventListener('click', function (e) { e.preventDefault(); go(-1); });
+  next.addEventListener('click', function (e) { e.preventDefault(); go(1); });
+  track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+  track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { go(1); e.preventDefault(); } if (e.key === 'ArrowLeft') { go(-1); e.preventDefault(); } });
+  window.addEventListener('resize', update);
+  update();
+});
