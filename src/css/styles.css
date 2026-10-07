@@ -171,11 +171,7 @@ p { margin: 0 0 1em; }
 .team article { display: grid; grid-template-rows: subgrid; grid-row: span 6; align-content: start; }
 .team img, .team .photo-placeholder { width: 100%; aspect-ratio: 1.2; object-fit: cover; }
 .team h3 { font-size: 22px; margin: 16px 0 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; align-self: start; }
-.team h3 .li-btn { margin-top: 4px; }
 .team h3 .nm { display: block; }
-.li-btn { flex: none; display: inline-flex; align-items: center; gap: 6px; font: 600 9px/1 var(--sans); letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink); text-decoration: none; border: 1px solid var(--ink); padding: 7px 10px; border-radius: 999px; transition: background .15s, color .15s; }
-.li-btn:hover { background: var(--ink); color: var(--paper); }
-.li-btn span { font-size: 11px; }
 .team .role { font-size: 10px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 600; color: var(--muted); margin: 6px 0 12px; }
 .team .bio, .team .more p { font: 400 13px/1.65 var(--sans); color: var(--body); margin: 0 0 10px; }
 .team .quals { display: block; font-size: 15px; font-family: var(--serif); color: var(--muted); margin-top: 2px; }
@@ -194,9 +190,10 @@ p { margin: 0 0 1em; }
 .values p { font-size: 13px; color: var(--body); margin: 0; line-height: 1.6; }
 
 /* Accreditation logos -------------------------------------------- */
-.accreditations { list-style: none; margin: 56px 0 0; padding: 40px 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; align-items: center; }
-.accreditations li { display: grid; place-items: center; height: 80px; padding: 0 6%; }
-.accreditations img { max-height: 54px; max-width: 100%; width: auto; height: auto; object-fit: contain; }
+.accred-band { padding: 44px var(--gutter); border-top: 1px solid var(--line); }
+.accreditations { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 48px; align-items: center; }
+.accreditations li { display: grid; place-items: center; height: 70px; }
+.accreditations img { max-height: 54px; max-width: 170px; width: auto; height: auto; object-fit: contain; }
 
 /* Simple page intro (privacy, 404) ------------------------------- */
 .page-intro { padding: 90px var(--gutter) 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; border-bottom: 1px solid var(--line); }
@@ -270,7 +267,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
   .service-grid, .values { grid-template-columns: repeat(2, 1fr); }
   .team { grid-template-columns: repeat(2, 1fr); grid-template-rows: none; gap: 40px 30px; }
   .team article { grid-template-rows: none; grid-row: auto; }
-  .accreditations { grid-template-columns: repeat(2, 1fr); }
+  .accreditations { gap: 20px 32px; }
+  .accreditations img { max-height: 44px; max-width: 130px; }
   .service-grid li:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
   .service-grid li:nth-child(2n) { padding-left: 32px; border-left: 1px solid var(--line); }
   .project-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
