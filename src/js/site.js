@@ -41,6 +41,12 @@
       var tags = (c.getAttribute('data-tags') || '').split(/\s+/);
       c.hidden = !(f === 'all' || tags.indexOf(f) !== -1);
     });
+    var empty = document.getElementById('filter-empty');
+    if (empty) {
+      var none = cards.every(function (c) { return c.hidden; });
+      empty.textContent = btn.textContent.trim() + ' projects to follow.';
+      empty.hidden = !none;
+    }
   });
 })();
 

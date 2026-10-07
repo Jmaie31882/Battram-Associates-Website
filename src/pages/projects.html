@@ -17,7 +17,7 @@
 
 <div class="filters" role="group" aria-label="Filter projects">
   <button type="button" data-filter="all" aria-pressed="true">All projects</button>
-  <button type="button" data-filter="listed" aria-pressed="false">Listed buildings</button>
+  <button type="button" data-filter="church" aria-pressed="false">Church work</button>
   <button type="button" data-filter="heritage" aria-pressed="false">Heritage</button>
   <button type="button" data-filter="extension" aria-pressed="false">Extensions</button>
   <button type="button" data-filter="renovation" aria-pressed="false">Renovations</button>
@@ -29,12 +29,12 @@
   <h2 class="sr-only">All projects</h2>
   <div class="project-grid cols-4" id="project-list">
     <article id="wigginton" data-tags="newbuild"><div class="photo-placeholder" aria-hidden="true"></div><h3>Wigginton</h3><p>New dwelling</p><p class="bio">Details to follow.</p></article>
-    <article id="tring-coach-house" data-tags="listed heritage renovation"><div class="photo-placeholder" aria-hidden="true"></div><h3>Tring</h3><p>Listed building · Conservation · Architecture</p><p class="bio">A well-appointed Grade II listed home with a dilapidated coach house. Full restoration and conversion permissions were achieved, then designed, tendered and project monitored.</p></article>
+    <article id="tring-coach-house" data-tags="heritage renovation"><div class="photo-placeholder" aria-hidden="true"></div><h3>Tring</h3><p>Listed building · Conservation · Architecture</p><p class="bio">A well-appointed Grade II listed home with a dilapidated coach house. Full restoration and conversion permissions were achieved, then designed, tendered and project monitored.</p></article>
     <article id="berkhamsted-orangery" data-tags="extension renovation"><div class="photo-placeholder" aria-hidden="true"></div><h3>Berkhamsted</h3><p>Renovation · Extensions · Interior</p><p class="bio">A leaking conservatory replaced with a high-quality orangery, plus a substantial two-storey side extension, front extension and garages, designed, specified, tendered and overseen to a high standard of finish.</p></article>
-    <article id="hampden" data-tags="heritage listed"><div class="photo-placeholder" aria-hidden="true"></div><h3>Hampden</h3><p>Heritage assessment · Surveying · Historic building · Advice</p><p class="bio">Details to follow.</p></article>
+    <article id="hampden" data-tags="heritage"><div class="photo-placeholder" aria-hidden="true"></div><h3>Hampden</h3><p>Heritage assessment · Surveying · Historic building · Advice</p><p class="bio">Details to follow.</p></article>
     <article id="wittering" data-tags="newbuild"><div class="photo-placeholder" aria-hidden="true"></div><h3>The Witterings</h3><p>New dwelling · Coastal · Timber frame</p><p class="bio">A Newfoundland-style timber-framed house on the sea front, clad in western red cedar with cedar shingles and copper guttering. Featured in Channel 4's <em>Homes by the Sea</em> with Charlie Luxton.</p></article>
     <article id="ashridge-arts-and-crafts" data-tags="newbuild"><div class="photo-placeholder" aria-hidden="true"></div><h3>Ashridge</h3><p>New dwelling · Arts and Crafts</p><p class="bio">An Arts and Crafts home in a forest setting with hand-made bricks and tiles and hand-cast glass in metal windows. Planning, drawings, specification, tendering and full supervision of the build.</p></article>
-    <article id="aldbury-inn" data-tags="heritage listed renovation"><div class="photo-placeholder" aria-hidden="true"></div><h3>Aldbury</h3><p>Public house · Heritage restoration</p><p class="bio">An inn not well maintained for a century, restored back to a community facility with heritage repairs agreed between local authority officers, the craftsmen on site and ourselves.</p></article>
+    <article id="aldbury-inn" data-tags="heritage renovation"><div class="photo-placeholder" aria-hidden="true"></div><h3>Aldbury</h3><p>Public house · Heritage restoration</p><p class="bio">An inn not well maintained for a century, restored back to a community facility with heritage repairs agreed between local authority officers, the craftsmen on site and ourselves.</p></article>
     <article id="potten-end-new" data-tags="newbuild"><div class="photo-placeholder" aria-hidden="true"></div><h3>Potten End</h3><p>New dwelling · Brownfield planning</p><p class="bio">Planning permission secured on brownfield land replacing derelict office buildings, followed by drawings, specification, tendering and build supervision.</p></article>
     <article id="ashridge-vernacular" data-tags="newbuild"><div class="photo-placeholder" aria-hidden="true"></div><h3>Ashridge</h3><p>Replacement dwelling · Vernacular design</p><p class="bio">A vernacular replacement home in a sylvan enclave of the forest, considered for a Brick Design Award and praised by the National Trust for how well it sits in its context.</p></article>
     <article id="hertfordshire-dwelling" data-tags="newbuild"><div class="photo-placeholder" aria-hidden="true"></div><h3>Hertfordshire</h3><p>Replacement dwelling · Pool and leisure wing</p><p class="bio">A modern replacement home with an indoor pool wing and basement gym, cinema and leisure rooms, including a bespoke curved marble stair and heat recovery.</p></article>
@@ -59,6 +59,7 @@
     <article id="survey-oxfordshire" data-tags="survey"><img src="/assets/projects/survey-oxfordshire-1.jpg" alt="Drone view of a clay tiled roof and gable with vegetation" width="1600" height="900" loading="lazy"><h3>Oxfordshire</h3><p>Building survey</p><p class="bio">Details to follow.</p></article>
     <article id="survey-tring" data-tags="survey"><div class="gallery" data-gallery><div class="track" tabindex="0" aria-label="Tring photos, scroll for more"><img src="/assets/projects/survey-tring-1.jpg" alt="Brick wall and rendered plinth below a shuttered window, photo 1 of 2" width="1600" height="1200" loading="lazy"><img src="/assets/projects/survey-tring-2.jpg" alt="Close-up of weathered, eroded brickwork, photo 2 of 2" width="1600" height="1200" loading="lazy"></div><button type="button" class="g-prev" aria-label="Previous photo">‹</button><button type="button" class="g-next" aria-label="Next photo">›</button><div class="dots" aria-hidden="true"><i></i><i></i></div></div><h3>Tring</h3><p>Building survey</p><p class="bio">Details to follow.</p></article>
   </div>
+  <p class="filter-empty" id="filter-empty" hidden>Church projects to follow.</p>
 </section>
 
 {{> closing}}
