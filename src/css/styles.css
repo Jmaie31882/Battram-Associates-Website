@@ -191,9 +191,9 @@ p { margin: 0 0 1em; }
 
 /* Accreditation logos -------------------------------------------- */
 .accred-band { padding: 44px var(--gutter); border-top: 1px solid var(--line); }
-.accreditations { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 48px; align-items: center; }
+.accreditations { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 36px; align-items: center; }
 .accreditations li { display: grid; place-items: center; height: 70px; }
-.accreditations img { max-height: 54px; max-width: 170px; width: auto; height: auto; object-fit: contain; }
+.accreditations img { height: var(--h, 48px); width: auto; max-width: 100%; object-fit: contain; }
 
 /* Simple page intro (privacy, 404) ------------------------------- */
 .page-intro { padding: 90px var(--gutter) 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; border-bottom: 1px solid var(--line); }
@@ -268,7 +268,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
   .team { grid-template-columns: repeat(2, 1fr); grid-template-rows: none; gap: 40px 30px; }
   .team article { grid-template-rows: none; grid-row: auto; }
   .accreditations { gap: 20px 32px; }
-  .accreditations img { max-height: 44px; max-width: 130px; }
+  .accreditations img { height: calc(var(--h, 48px) * .8); }
   .service-grid li:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
   .service-grid li:nth-child(2n) { padding-left: 32px; border-left: 1px solid var(--line); }
   .project-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
