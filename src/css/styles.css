@@ -320,3 +320,4 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
   html { scroll-behavior: auto; }
   .text-link span { transition: none; }
 }
+.service-grid p + p { margin-top: .75em; }
