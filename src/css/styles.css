@@ -343,15 +343,18 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
 .service-grid li.sketch-cell { display: grid; place-items: center; }
 .service-grid li.sketch-cell img { width: 100%; max-width: 440px; height: auto; }
 
-/* Design Studio: behind the design */
+/* Design Studio: behind the design (large landscape image above three smaller ones) */
 .behind { display: grid; grid-template-columns: minmax(260px, .8fr) 2.2fr; gap: 48px; padding: 70px var(--gutter); align-items: start; }
 .behind-copy h2 { font-size: 40px; line-height: 1.1; margin-bottom: 22px; }
 .behind-copy p { line-height: 1.75; color: var(--body); max-width: 340px; }
-.behind-grid { display: grid; grid-template-columns: 1.9fr 1fr; grid-template-rows: repeat(3, auto); gap: 18px 22px; }
-.behind-grid figure { margin: 0; display: grid; grid-template-rows: 1fr auto; }
-.behind-grid figure.big { grid-row: 1 / span 3; }
-.behind-grid img { width: 100%; height: 100%; min-height: 0; aspect-ratio: 2.1; object-fit: cover; display: block; }
-.behind-grid figure.big img { aspect-ratio: auto; }
+.behind-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 22px; }
+.behind-grid figure { margin: 0; min-width: 0; }
+.behind-grid figure.big { grid-column: 1 / -1; }
+.behind-grid img { width: 100%; height: auto; aspect-ratio: 1.45; object-fit: cover; display: block; }
+.behind-grid figure.big img { aspect-ratio: 2.2; }
+.behind-grid .gallery .track { aspect-ratio: 1.45; height: auto; }
+.behind-grid figure.big .gallery .track { aspect-ratio: 2.2; }
+.behind-grid .gallery .track img { aspect-ratio: auto; height: 100%; }
 .behind-grid h3 { font-size: 18px; margin: 10px 0 2px; }
 .behind-grid figure.big h3 { font-size: 22px; }
 .behind-grid p { font-size: 11px; color: var(--muted); margin: 0; }
@@ -361,12 +364,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
 }
 @media (max-width: 640px) {
   .behind-grid { grid-template-columns: 1fr; }
-  .behind-grid figure.big { grid-row: auto; }
-  .behind-grid figure.big img { aspect-ratio: 1.2; }
+  .behind-grid figure.big img, .behind-grid figure.big .gallery .track { aspect-ratio: 1.5; }
   .behind-copy h2 { font-size: 32px; }
 }
-.behind-grid .gallery { min-height: 0; }
-.behind-grid .gallery .track { aspect-ratio: 2.1; height: auto; }
-.behind-grid figure.big .gallery, .behind-grid figure.big .gallery .track { height: 100%; aspect-ratio: auto; }
-.behind-grid .gallery .track img { aspect-ratio: auto; height: 100%; min-height: 0; }
-@media (max-width: 640px) { .behind-grid figure.big .gallery .track { aspect-ratio: 1.3; height: auto; } }
