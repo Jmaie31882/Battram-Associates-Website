@@ -395,3 +395,20 @@ body.lb-open { overflow: hidden; }
   .lb-prev, .lb-next { top: auto; bottom: 12px; transform: none; }
   .lb-bar { padding-bottom: 70px; }
 }
+
+/* Design Studio overview: four staggered portrait details */
+.overview .detail-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: start; padding-bottom: 48px; }
+.overview .detail-strip figure { margin: 0; overflow: hidden; }
+.overview .detail-strip figure:nth-child(even) { transform: translateY(48px); }
+.overview .detail-strip img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; display: block; transition: transform .6s ease; }
+.overview .detail-strip figure:hover img { transform: scale(1.04); }
+@media (max-width: 1000px) {
+  .overview .detail-strip img { height: auto; }
+}
+@media (max-width: 640px) {
+  .overview .detail-strip { grid-template-columns: repeat(2, 1fr); gap: 10px; padding-bottom: 32px; }
+  .overview .detail-strip figure:nth-child(even) { transform: translateY(32px); }
+  .overview .detail-strip img { height: auto !important; }
+}
+@media (prefers-reduced-motion: reduce) { .overview .detail-strip img { transition: none; } }
+@media (min-width: 1001px) { .overview:has(.detail-strip) { grid-template-columns: .85fr 1.25fr; gap: 5vw; } .overview .detail-strip { gap: 18px; } }
