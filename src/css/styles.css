@@ -368,3 +368,30 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
   .behind-copy h2 { font-size: 32px; }
 }
 .behind-grid .moods .track img { object-fit: contain; background: #ece9e1; }
+
+/* Project slideshow */
+#project-list article.has-photos { cursor: pointer; }
+#project-list article.has-photos > img, #project-list article.has-photos .gallery { transition: opacity .2s; }
+#project-list article.has-photos:hover > img, #project-list article.has-photos:hover .gallery { opacity: .9; }
+.view-photos { display: inline-block; margin: 12px 0 0; padding: 0 0 3px; background: none; border: 0; border-bottom: 1px solid currentColor; font: 600 10px/1.4 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; color: var(--ink); cursor: pointer; }
+.view-photos + h3 { margin-top: 8px; }
+body.lb-open { overflow: hidden; }
+.lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(20, 20, 18, .94); display: grid; grid-template-rows: 1fr auto; }
+.lightbox[hidden] { display: none; }
+.lb-stage { display: grid; place-items: center; padding: 56px 72px 8px; min-height: 0; }
+.lb-stage img { max-width: 100%; max-height: calc(100vh - 130px); width: auto; height: auto; object-fit: contain; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
+.lb-bar { display: flex; justify-content: center; gap: 18px; padding: 14px 20px 22px; color: #e9e6de; font: 500 12px/1 var(--sans); letter-spacing: 1.6px; text-transform: uppercase; }
+.lb-title { font: 20px/1 var(--serif); letter-spacing: .5px; text-transform: none; }
+.lb-count { align-self: center; color: #b9b5ab; }
+.lightbox button { position: absolute; background: rgba(245,243,238,.12); color: #fff; border: 0; cursor: pointer; border-radius: 50%; width: 46px; height: 46px; font-size: 28px; line-height: 1; display: grid; place-items: center; padding: 0 0 4px; }
+.lightbox button:hover { background: rgba(245,243,238,.26); }
+.lightbox button[hidden] { display: none; }
+.lightbox :focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.lb-close { top: 14px; right: 16px; }
+.lb-prev { left: 14px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 14px; top: 50%; transform: translateY(-50%); }
+@media (max-width: 640px) {
+  .lb-stage { padding: 60px 8px 4px; }
+  .lb-prev, .lb-next { top: auto; bottom: 12px; transform: none; }
+  .lb-bar { padding-bottom: 70px; }
+}

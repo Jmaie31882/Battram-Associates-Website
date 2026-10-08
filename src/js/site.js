@@ -112,3 +112,97 @@ document.querySelectorAll('[data-gallery]').forEach(function (g) {
   window.addEventListener('resize', update);
   update();
 });
+
+// Project slideshow: click a project with photos to view them full screen
+(function () {
+  var list = document.getElementById('project-list');
+  if (!list) return;
+  var cards = Array.prototype.slice.call(list.querySelectorAll('article')).filter(function (c) {
+    return c.hasAttribute('data-photos') || c.querySelector('img');
+  });
+  if (!cards.length) return;
+
+  var box = document.createElement('div');
+  box.className = 'lightbox'; box.hidden = true;
+  box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true');
+  box.innerHTML = '<div class="lb-stage"><img alt=""></div>' +
+    '<div class="lb-bar"><span class="lb-title"></span><span class="lb-count" aria-live="polite"></span></div>' +
+    '<button type="button" class="lb-close" aria-label="Close slideshow">×</button>' +
+    '<button type="button" class="lb-prev" aria-label="Previous photo">‹</button>' +
+    '<button type="button" class="lb-next" aria-label="Next photo">›</button>';
+  document.body.appendChild(box);
+  var img = box.querySelector('img'), title = box.querySelector('.lb-title'), count = box.querySelector('.lb-count');
+  var bPrev = box.querySelector('.lb-prev'), bNext = box.querySelector('.lb-next'), bClose = box.querySelector('.lb-close');
+  var photos = [], i = 0, opener = null;
+
+  function photosFor(card) {
+    var d = card.getAttribute('data-photos');
+    if (d) return d.split('|').map(function (p) { var x = p.split('::'); return { src: x[0], alt: x[1] || '' }; });
+    return Array.prototype.map.call(card.querySelectorAll('img'), function (im) { return { src: im.getAttribute('src'), alt: im.alt }; });
+  }
+  function show() {
+    img.src = photos[i].src; img.alt = photos[i].alt;
+    count.textContent = photos.length > 1 ? (i + 1) + ' / ' + photos.length : '';
+    bPrev.hidden = bNext.hidden = photos.length < 2;
+    var n = new Image(); n.src = photos[(i + 1) % photos.length].src;
+  }
+  function open(card, start) {
+    photos = photosFor(card); i = start || 0; opener = document.activeElement;
+    var name = card.querySelector('h3').textContent;
+    title.textContent = name; box.setAttribute('aria-label', name + ' photos');
+    show(); box.hidden = false; document.body.classList.add('lb-open'); bClose.focus();
+  }
+  function close() {
+    box.hidden = true; document.body.classList.remove('lb-open'); img.removeAttribute('src');
+    if (opener && opener.focus) opener.focus();
+    if (location.hash) history.replaceState(null, '', location.pathname);
+  }
+  function go(d) { i = (i + d + photos.length) % photos.length; show(); }
+
+  bPrev.addEventListener('click', function () { go(-1); });
+  bNext.addEventListener('click', function () { go(1); });
+  bClose.addEventListener('click', close);
+  box.addEventListener('click', function (e) { if (e.target === box || e.target.classList.contains('lb-stage')) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') go(1);
+    else if (e.key === 'ArrowLeft') go(-1);
+    else if (e.key === 'Tab') {
+      var f = [bClose, bPrev, bNext].filter(function (b) { return !b.hidden; });
+      var k = f.indexOf(document.activeElement);
+      e.preventDefault(); f[(k + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+    }
+  });
+  var x0 = null;
+  box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', function (e) {
+    if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+  });
+
+  cards.forEach(function (card) {
+    var n = photosFor(card).length;
+    card.classList.add('has-photos');
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'view-photos';
+    btn.textContent = n > 1 ? 'View ' + n + ' photos' : 'View photo';
+    btn.setAttribute('aria-label', 'View ' + card.querySelector('h3').textContent + ' photos');
+    btn.addEventListener('click', function (e) { e.stopPropagation(); open(card, 0); });
+    card.querySelector('h3').insertAdjacentElement('beforebegin', btn);
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('.g-prev, .g-next, .view-photos')) return;
+      var tr = card.querySelector('.track');
+      var start = tr ? Math.round(tr.scrollLeft / tr.clientWidth) : 0;
+      open(card, start);
+    });
+  });
+
+  // Arriving from a featured project link (e.g. /projects/#wigginton) opens its slideshow
+  function fromHash() {
+    var target = location.hash && document.getElementById(location.hash.slice(1));
+    if (target && cards.indexOf(target) !== -1) open(target, 0);
+  }
+  fromHash();
+  window.addEventListener('hashchange', fromHash);
+})();
