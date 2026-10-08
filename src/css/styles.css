@@ -41,7 +41,7 @@ p { margin: 0 0 1em; }
 .brand { display: flex; align-items: center; gap: 18px; text-decoration: none; color: var(--ink); }
 .brand .mono { height: 64px; width: auto; }
 .brand .wordmark { display: flex; flex-direction: column; justify-content: center; padding-left: 18px; border-left: 1px solid #8e8b84; align-self: stretch; }
-.brand .name { font: 21px/1.08 var(--serif); letter-spacing: 2.4px; text-transform: uppercase; }
+.brand .name { font: 21px/1.08 var(--serif); letter-spacing: 2.4px; text-transform: uppercase; color: #000099; }
 .brand .sub { font: 500 8.5px/1 var(--sans); letter-spacing: 2.6px; text-transform: uppercase; color: #5a5852; margin-top: 7px; }
 .brand .tag { font: 500 8px/1 var(--sans); letter-spacing: 2.2px; text-transform: uppercase; color: #5a5852; margin-top: 8px; white-space: nowrap; }
 .site-footer .brand .mono { height: 48px; }
@@ -342,3 +342,26 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
 .filter-empty { font-size: 15px; color: var(--body); padding: 30px 0 10px; margin: 0; }
 .service-grid li.sketch-cell { display: grid; place-items: center; }
 .service-grid li.sketch-cell img { width: 100%; max-width: 440px; height: auto; }
+
+/* Design Studio: behind the design */
+.behind { display: grid; grid-template-columns: minmax(260px, .8fr) 2.2fr; gap: 48px; padding: 70px var(--gutter); align-items: start; }
+.behind-copy h2 { font-size: 40px; line-height: 1.1; margin-bottom: 22px; }
+.behind-copy p { line-height: 1.75; color: var(--body); max-width: 340px; }
+.behind-grid { display: grid; grid-template-columns: 1.9fr 1fr; grid-template-rows: repeat(3, auto); gap: 18px 22px; }
+.behind-grid figure { margin: 0; display: grid; grid-template-rows: 1fr auto; }
+.behind-grid figure.big { grid-row: 1 / span 3; }
+.behind-grid img { width: 100%; height: 100%; min-height: 0; aspect-ratio: 2.1; object-fit: cover; display: block; }
+.behind-grid figure.big img { aspect-ratio: auto; }
+.behind-grid h3 { font-size: 18px; margin: 10px 0 2px; }
+.behind-grid figure.big h3 { font-size: 22px; }
+.behind-grid p { font-size: 11px; color: var(--muted); margin: 0; }
+@media (max-width: 1000px) {
+  .behind { grid-template-columns: 1fr; }
+  .behind-copy p { max-width: 560px; }
+}
+@media (max-width: 640px) {
+  .behind-grid { grid-template-columns: 1fr; }
+  .behind-grid figure.big { grid-row: auto; }
+  .behind-grid figure.big img { aspect-ratio: 1.2; }
+  .behind-copy h2 { font-size: 32px; }
+}
