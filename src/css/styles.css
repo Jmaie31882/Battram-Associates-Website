@@ -350,9 +350,9 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #a0463
 .behind-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 22px; }
 .behind-grid figure { margin: 0; min-width: 0; }
 .behind-grid figure.big { grid-column: 1 / -1; }
-.behind-grid img { width: 100%; height: auto; aspect-ratio: 1.45; object-fit: cover; display: block; }
+.behind-grid img { width: 100%; height: auto; aspect-ratio: 1.6; object-fit: cover; display: block; }
 .behind-grid figure.big img { aspect-ratio: 2.2; }
-.behind-grid .gallery .track { aspect-ratio: 1.45; height: auto; }
+.behind-grid .gallery .track { aspect-ratio: 1.6; height: auto; }
 .behind-grid figure.big .gallery .track { aspect-ratio: 2.2; }
 .behind-grid .gallery .track img { aspect-ratio: auto; height: 100%; }
 .behind-grid h3 { font-size: 18px; margin: 10px 0 2px; }
